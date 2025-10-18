@@ -1,0 +1,111 @@
+title: VerusFi
+description: Building freedom technology and financial software
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
+  - README.md
+  - CLAUDE-PROMPT.md
+  - scripts/
+  - .gitignore
+  - node_modules/
+  - vendor/
+
+# Supported languages
+languages:
+  - code: en
+    name: English
+    flag: 🇺🇸
+    dir: ltr
+  - code: pt-br
+    name: Português
+    flag: 🇧🇷
+    dir: ltr
+  - code: es
+    name: Español
+    flag: 🇪🇸
+    dir: ltr
+  - code: ur
+    name: اردو
+    flag: 🇵🇰
+    dir: rtl
+  - code: ar
+    name: العربية
+    flag: 🇸🇦
+    dir: rtl
+
+# URL mappings for language switching
+url_mappings:
+  home:
+    en: /en/
+    pt-br: /pt-br/
+    es: /es/
+    ur: /ur/
+    ar: /ar/
+  about:
+    en: /en/about/
+    pt-br: /pt-br/sobre/
+    es: /es/acerca/
+    ur: /ur/about/
+    ar: /ar/about/
+  products:
+    en: /en/products/
+    pt-br: /pt-br/produtos/
+    es: /es/productos/
+    ur: /ur/products/
+    ar: /ar/products/
+  blog:
+    en: /en/blog/
+    pt-br: /pt-br/blog/
+    es: /es/blog/
+    ur: /ur/blog/
+    ar: /ar/blog/
+
+# UI translations (minimal, only for navigation)
+t:
+  nav_home:
+    en: Home
+    pt-br: Início
+    es: Inicio
+    ur: ہوم
+    ar: الرئيسية
+  nav_products:
+    en: Products
+    pt-br: Produtos
+    es: Productos
+    ur: مصنوعات
+    ar: المنتجات
+  nav_about:
+    en: About
+    pt-br: Sobre
+    es: Acerca
+    ur: تعارف
+    ar: عن
+  nav_blog:
+    en: Blog
+    pt-br: Blog
+    es: Blog
+    ur: بلاگ
+    ar: مدونة
+  footer_tagline:
+    en: Building freedom technology for financial sovereignty
+    pt-br: Construindo tecnologia de liberdade para soberania financeira
+    es: Construyendo tecnología de libertad para soberanía financiera
+    ur: مالی خودمختاری کے لیے آزادی کی ٹیکنالوجی بنانا
+    ar: بناء تقنية الحرية للسيادة المالية
+  all_rights:
+    en: All rights reserved
+    pt-br: Todos os direitos reservados
+    es: Todos los derechos reservados
+    ur: تمام حقوق محفوظ ہیں
+    ar: جميع الحقوق محفوظة

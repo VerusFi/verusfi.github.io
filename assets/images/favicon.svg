@@ -1,0 +1,24 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="favGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#26A17B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#0A0E27"/>
+
+  <!-- Simplified V checkmark -->
+  <path d="M 10 12 L 14 20 L 22 10"
+        stroke="url(#favGradient)"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"/>
+
+  <!-- Three small dots for decentralization -->
+  <circle cx="11" cy="14" r="1.5" fill="url(#favGradient)" opacity="0.6"/>
+  <circle cx="21" cy="14" r="1.5" fill="url(#favGradient)" opacity="0.6"/>
+  <circle cx="16" cy="24" r="1.5" fill="url(#favGradient)" opacity="0.6"/>
+</svg>

@@ -1,188 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VerusFi - Building Freedom Technology</title>
-    <meta name="description" content="Building freedom technology and financial software">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #0A0E27, #1A1F3A);
-            color: #FFFFFF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .loader {
-            max-width: 600px;
-        }
-
-        .logo {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .logo-verus {
-            color: #FFFFFF;
-        }
-
-        .logo-fi {
-            background: linear-gradient(135deg, #26A17B, #3B82F6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .spinner {
-            margin: 2rem auto;
-            width: 50px;
-            height: 50px;
-            border: 4px solid rgba(255, 255, 255, 0.1);
-            border-top-color: #26A17B;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        p {
-            color: #94A3B8;
-            font-size: 1.1rem;
-            margin-top: 1rem;
-        }
-
-        .lang-select {
-            margin-top: 2rem;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .lang-btn {
-            background: rgba(38, 161, 123, 0.1);
-            border: 1px solid #26A17B;
-            color: #FFFFFF;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .lang-btn:hover {
-            background: rgba(38, 161, 123, 0.2);
-            transform: translateY(-2px);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerusFi – Digital Finance Made Human</title>
+  <meta name="description" content="VerusFi brings individuals full control of their money, backed by transparent technology and real reserves.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <div class="loader">
-        <div class="logo">
-            <span class="logo-verus">Verus</span><span class="logo-fi">Fi</span>
-        </div>
-        <div class="spinner"></div>
-        <p id="loadingText">Detecting your language...</p>
-        <div class="lang-select" id="langSelect" style="display: none;">
-            <a href="/en/" class="lang-btn">🇺🇸 English</a>
-            <a href="/pt-br/" class="lang-btn">🇧🇷 Português</a>
-            <a href="/es/" class="lang-btn">🇪🇸 Español</a>
-            <a href="/ur/" class="lang-btn">🇵🇰 اردو</a>
-            <a href="/ar/" class="lang-btn">🇸🇦 العربية</a>
-        </div>
+  <nav id="navbar" class="navbar">
+    <div class="container nav-wrapper">
+      <a href="#home" class="logo" aria-label="VerusFi home">
+        <span class="logo-text">Verus</span><span class="logo-icon">Fi</span>
+      </a>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <a href="#mission" class="nav-link">Mission</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#what-we-offer" class="nav-link">What We Offer</a>
+        <a href="#community" class="nav-link">Community</a>
+        <a href="#contact" class="btn btn-primary">Get in touch</a>
+      </div>
     </div>
+  </nav>
 
-    <script>
-        // Language detection and redirect
-        function detectAndRedirect() {
-            // Get browser language
-            const browserLang = navigator.language || navigator.userLanguage;
-            const langCode = browserLang.toLowerCase();
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="hero-text" data-animate="fade-up">
+        <h1 class="hero-title">
+          Making digital finance
+          <span class="highlight">fair</span>,
+          <span class="highlight">simple</span>, and
+          <span class="highlight">human</span>
+        </h1>
+        <p class="hero-description">
+          VerusFi brings individuals internet banking with Web3 features, giving people control over their money and privacy, without complexity.
+        </p>
+        <div class="hero-actions">
+          <a href="#what-we-offer" class="btn btn-primary btn-lg"><i data-lucide="compass"></i>Explore VerusFi</a>
+          <a href="#community" class="btn btn-secondary btn-lg"><i data-lucide="users"></i>Join the community</a>
+        </div>
+      </div>
+      <div class="hero-image" data-animate="fade-left">
+        <img src="assets/images/hero.png" alt="VerusFi – Digital finance illustration" loading="eager">
+      </div>
+    </div>
+  </section>
 
-            // Language mapping
-            const languageMap = {
-                'en': '/en/',
-                'en-us': '/en/',
-                'en-gb': '/en/',
-                'pt': '/pt-br/',
-                'pt-br': '/pt-br/',
-                'pt-pt': '/pt-br/',
-                'es': '/es/',
-                'es-es': '/es/',
-                'es-mx': '/es/',
-                'es-ar': '/es/',
-                'ur': '/ur/',
-                'ur-pk': '/ur/',
-                'ar': '/ar/',
-                'ar-sa': '/ar/',
-                'ar-eg': '/ar/',
-                'ar-ae': '/ar/'
-            };
+  <section class="problem-statement" id="problem">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <h2 class="section-title">
+          Fragile systems call for<br>
+          <span class="highlight-blue">transparent solutions</span>
+        </h2>
+      </div>
+      <div class="problem-content" data-animate="fade-up">
+        <p class="lead-text">
+          Today, billions depend on fragile financial systems—banks that limit what they store, scrutinize their lives, and profit from data and fees.
+        </p>
+        <p class="lead-text">
+          Access to stability and privacy has become a privilege, not a right.
+        </p>
+      </div>
+    </div>
+  </section>
 
-            // Check for exact match
-            let redirectUrl = languageMap[langCode];
+  <section class="solution" id="solution">
+    <div class="container solution-grid">
+      <div class="solution-text" data-animate="fade-right">
+        <h2 class="section-title"><span class="brand-name">VerusFi</span> is changing that…</h2>
+        <p class="solution-description">
+          We're building the infrastructure that lets people hold, send, and secure assets in a stable digital currency backed by reserves every step of the way.
+        </p>
+        <p class="solution-description">
+          No intermediaries. No hidden fees. Just sound, transparent finance for everyone.
+        </p>
+        <a href="#community" class="btn btn-primary btn-lg"><i data-lucide="arrow-right"></i>Join us</a>
+      </div>
+      <div class="solution-image" data-animate="fade-left">
+        <img src="assets/images/tech.png" alt="VerusFi technology platform" loading="lazy">
+      </div>
+    </div>
+  </section>
 
-            // If no exact match, try to match the language prefix
-            if (!redirectUrl) {
-                const langPrefix = langCode.split('-')[0];
-                redirectUrl = languageMap[langPrefix];
-            }
+  <section class="mission" id="mission">
+    <div class="container">
+      <div class="mission-content" data-animate="fade-up">
+        <div class="mission-label">
+          <a href="#mission" class="link-inline">Our Mission</a> —
+          <a href="#how-it-works" class="link-inline">How It Works</a>
+        </div>
+        <h2 class="section-title centered">Making financial sovereignty simple</h2>
+        <p class="mission-description">
+          VerusFi's mission is to give individuals full control of their money, backed by transparent technology and real reserves.
+        </p>
+        <p class="mission-description">
+          Our products combine the familiarity of banking with the independence of decentralized tech—so that users can bank freely, confidently, and without asking permission.
+        </p>
+      </div>
+    </div>
+  </section>
 
-            // Default to English if no match found
-            if (!redirectUrl) {
-                redirectUrl = '/en/';
-            }
+  <section class="what-we-build" id="how-it-works">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">
+          Financial tools designed for<br>
+          people, not institutions.
+        </h2>
+      </div>
+      <div class="build-content" data-animate="fade-up">
+        <p class="lead-text">
+          We're creating a new kind of financial infrastructure—intuitive and trustworthy—like modern banking rebuilt for transparency.
+        </p>
+        <p class="lead-text">
+          Our first product, <strong>VerusWealth</strong>, acts like a digital checking account powered by stablecoins, fully backed (100%+ with USDT).
+        </p>
+        <p class="lead-text">
+          Every token is fully collateralized, auditable, and transparent.
+        </p>
+      </div>
+    </div>
+  </section>
 
-            // Check if user has manually selected a language before
-            const savedLang = localStorage.getItem('verusfi-lang');
-            if (savedLang) {
-                redirectUrl = savedLang;
-            }
+  <section class="what-we-offer" id="what-we-offer">
+    <div class="container">
+      <div class="section-header centered" data-animate="fade-up">
+        <span class="section-label">Our Principles</span>
+        <h2 class="section-title">What we offer</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" data-animate="fade-up">
+          <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+          <h3 class="feature-title">Security</h3>
+          <p class="feature-description">
+            100% backed assets held in U.S. Federal Reserve regulated accounts.
+          </p>
+        </div>
+        <div class="feature-card" data-animate="fade-up">
+          <div class="feature-icon"><i data-lucide="file-text"></i></div>
+          <h3 class="feature-title">Transparency</h3>
+          <p class="feature-description">
+            Fully auditable, open-source technology you can verify yourself.
+          </p>
+        </div>
+        <div class="feature-card" data-animate="fade-up">
+          <div class="feature-icon"><i data-lucide="zap"></i></div>
+          <h3 class="feature-title">Simplicity</h3>
+          <p class="feature-description">
+            Designed for humans, not just for crypto users.
+          </p>
+        </div>
+        <div class="feature-card" data-animate="fade-up">
+          <div class="feature-icon"><i data-lucide="unlock"></i></div>
+          <h3 class="feature-title">Freedom</h3>
+          <p class="feature-description">
+            Your money, your control—always.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            // Save the language preference
-            localStorage.setItem('verusfi-lang', redirectUrl);
+  <section class="statement" id="statement">
+    <div class="container">
+      <div class="statement-content" data-animate="zoom-in">
+        <h2 class="statement-title">
+          This is not speculation.<br>
+          <span class="gradient-text">This is finance rebuilt — open, stable, and incorruptible.</span>
+        </h2>
+      </div>
+    </div>
+  </section>
 
-            // Show manual selection after 2 seconds if redirect fails
-            setTimeout(() => {
-                document.getElementById('loadingText').textContent = 'Choose your language:';
-                document.getElementById('langSelect').style.display = 'flex';
-            }, 2000);
+  <section class="community" id="community">
+    <div class="container community-grid">
+      <div class="community-image" data-animate="fade-right">
+        <img src="assets/images/finance.png" alt="VerusFi community collaboration" loading="lazy">
+      </div>
+      <div class="community-text" data-animate="fade-left">
+        <span class="section-label">Our Community</span>
+        <h2 class="section-title">A collective effort to build fair, transparent finance.</h2>
+        <p class="community-description">
+          VerusFi brings together developers, designers, researchers, and users who believe technology should empower—not exploit.
+        </p>
+        <p class="community-description">
+          We're building a movement grounded in ethics, openness, and shared progress.
+        </p>
+        <div class="community-actions">
+          <a href="#contact" class="btn btn-primary btn-lg"><i data-lucide="mail"></i>Get in touch</a>
+          <a href="https://github.com/verusfi" class="btn btn-secondary btn-lg" target="_blank" rel="noopener"><i data-lucide="github"></i>Follow on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            // Redirect after 1 second
-            setTimeout(() => {
-                window.location.href = redirectUrl;
-            }, 1000);
-        }
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content" data-animate="fade-up">
+        <span class="footer-label">Get Involved</span>
+        <h2 class="footer-title">Help shape the future of open finance.</h2>
+        <p class="footer-description">
+          Support the mission, contribute to the code, or join the conversation—every action strengthens the new foundation for global finance.
+        </p>
+        <div class="footer-actions">
+          <a href="https://t.me/verusfi" class="btn btn-primary btn-lg" target="_blank" rel="noopener"><i data-lucide="send"></i>Join on Telegram</a>
+          <a href="https://github.com/verusfi" class="btn btn-secondary btn-lg" target="_blank" rel="noopener"><i data-lucide="github"></i>Follow on GitHub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 VerusFi. All rights reserved. Built with transparency and purpose.</p>
+      </div>
+    </div>
+  </footer>
 
-        // Run detection on page load
-        detectAndRedirect();
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
 
-        // Add click handlers to save language preference
-        document.addEventListener('DOMContentLoaded', function() {
-            const langButtons = document.querySelectorAll('.lang-btn');
-            langButtons.forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    localStorage.setItem('verusfi-lang', this.getAttribute('href'));
-                });
-            });
-        });
-    </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
